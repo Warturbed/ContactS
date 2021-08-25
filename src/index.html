@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body> 
+    <div class="container">
+      <header class="header"> 
+        <h1 class="header__title">Contact book</h1>
+        <div class="header__content">
+          <div class="search-form header__search-form"> 
+            <label class="search-form__label" for="search"></label>
+            <input class="search-form__input" type="text" placeholder="Search" id="search">
+          </div>
+          <div class="sort header__sort"><span class="sort__title">Sort by</span>
+            <ul class="sort__list hide">
+              <li class="sort__item">All</li>
+              <li class="sort__item">Alphabet</li>
+              <li class="sort__item">Favorite</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main class="contacts"> 
+        <ul class="contacts__list"> 
+          <li class="contacts-item"><span class="contacts-item__name contacts-item__name--favorite">Anna Conroy</span><img class="contacts-item__avatar" src="./img/user.png" alt="avatar"><span class="contacts-item__country">Country: Congo</span><span class="contacts-item__city">City: Utah</span><span class="contacts-item__email">Email: Joaquin_Farrell79@yahoo.com</span><span class="contacts-item__phone">Phone: 89002253535</span>
+            <button class="contacts-item__edit"></button>
+          </li>
+          <li class="contacts-item"><span class="contacts-item__name contacts-item__name--favorite">Anna Conroy</span><img class="contacts-item__avatar" src="./img/user.png" alt="avatar"><span class="contacts-item__country">Country: Congo</span><span class="contacts-item__city">City: Utah</span><span class="contacts-item__email">Email: Joaquin_Farrell79@yahoo.com</span><span class="contacts-item__phone">Phone: 89002253535</span>
+            <button class="contacts-item__edit"></button>
+          </li>
+          <li class="contacts-item"><span class="contacts-item__name contacts-item__name--favorite">Anna Conroy</span><img class="contacts-item__avatar" src="./img/user.png" alt="avatar"><span class="contacts-item__country">Country: Congo</span><span class="contacts-item__city">City: Utah</span><span class="contacts-item__email">Email: Joaquin_Farrell79@yahoo.com</span><span class="contacts-item__phone">Phone: 89002253535</span>
+            <button class="contacts-item__edit"></button>
+          </li>
+        </ul>
+      </main>
+      <div class="edit-form hide">
+        <p class="edit-form__title">Edit Contact</p>
+        <ul class="edit-form__list">
+          <li class="edit-form__item">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+          </li>
+          <li class="edit-form__item">
+            <label for="country">Country:</label>
+            <input type="text" id="country">
+          </li>
+          <li class="edit-form__item">
+            <label for="city">City:</label>
+            <input type="text" id="city">
+          </li>
+          <li class="edit-form__item">
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+          </li>
+          <li class="edit-form__item">
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone">
+          </li>
+          <li class="edit-form__item">
+            <label for="favorite">Favorite</label>
+            <input type="checkbox" id="favorite">
+          </li>
+        </ul>
+        <button class="edit-form__button">Edit</button>
+      </div>
+    </div>
+  </body>
+</html>

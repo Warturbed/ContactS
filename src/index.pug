@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Contacts
+        link(rel="stylesheet", href="./styles/style.css")
+    body 
+        .container
+            header.header 
+                h1.header__title Contact book
+                .header__content
+                    .search-form.header__search-form 
+                        label(for="search").search-form__label
+                        input(type="text" placeholder="Search" id="search").search-form__input
+                    .sort.header__sort
+                        span.sort__title Sort by
+                        ul.sort__list.hide
+                            li.sort__item All
+                            li.sort__item Alphabet
+                            li.sort__item Favorite
+            main.contacts 
+                ul.contacts__list 
+                    li.contacts-item
+                        span.contacts-item__name.contacts-item__name--favorite Anna Conroy
+                        img(src="./img/user.png", alt="avatar").contacts-item__avatar
+                        span.contacts-item__country Country: Congo
+                        span.contacts-item__city City: Utah
+                        span.contacts-item__email Email: Joaquin_Farrell79@yahoo.com
+                        span.contacts-item__phone Phone: 89002253535
+                        button.contacts-item__edit
+                    li.contacts-item
+                        span.contacts-item__name.contacts-item__name--favorite Anna Conroy
+                        img(src="./img/user.png", alt="avatar").contacts-item__avatar
+                        span.contacts-item__country Country: Congo
+                        span.contacts-item__city City: Utah
+                        span.contacts-item__email Email: Joaquin_Farrell79@yahoo.com
+                        span.contacts-item__phone Phone: 89002253535
+                        button.contacts-item__edit
+                    li.contacts-item
+                        span.contacts-item__name.contacts-item__name--favorite Anna Conroy
+                        img(src="./img/user.png", alt="avatar").contacts-item__avatar
+                        span.contacts-item__country Country: Congo
+                        span.contacts-item__city City: Utah
+                        span.contacts-item__email Email: Joaquin_Farrell79@yahoo.com
+                        span.contacts-item__phone Phone: 89002253535
+                        button.contacts-item__edit
+            .edit-form.hide
+                p.edit-form__title Edit Contact
+                ul.edit-form__list
+                    li.edit-form__item
+                        label(for="name") Name:
+                        input(type="text" id="name")
+                    li.edit-form__item
+                        label(for="country") Country:
+                        input(type="text" id="country")
+                    li.edit-form__item
+                        label(for="city") City:
+                        input(type="text" id="city")
+                    li.edit-form__item
+                        label(for="email") Email:
+                        input(type="text" id="email")
+                    li.edit-form__item
+                        label(for="phone") Phone:
+                        input(type="number" id="phone")
+                    li.edit-form__item
+                        label(for="favorite") Favorite
+                        input(type="checkbox" id="favorite")
+                button.edit-form__button Edit
