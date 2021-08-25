@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
+:root {
+  --color-black: #333;
+  --color-white: #fff;
+  --color-white-hover: #f4f4f4;
+  --color-grey: #666;
+}
+
 .container {
   position: relative;
+  background-color: var(--color-white);
 }
 
 .header {
@@ -25,10 +33,10 @@
 }
 
 .header__title {
-  color: white;
+  color: var(--color-white);
   font-size: 35px;
   font-weight: 700;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--color-white);
 }
 
 .header__content {
@@ -75,6 +83,7 @@
           align-items: center;
   position: relative;
   padding: 20px;
+  background-color: var(--color-white);
   -webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
@@ -93,6 +102,12 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .contacts-item__name {
+    font-size: 18px;
+  }
 }
 
 .contacts-item__name--favorite::after {
@@ -187,7 +202,7 @@
   display: inline-block;
   width: 120px;
   height: 30px;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 10px;
   position: relative;
   cursor: pointer;
@@ -216,18 +231,18 @@
 .sort__item {
   text-align: center;
   line-height: 35px;
-  background-color: #fff;
+  background-color: var(--color-white);
   width: 120px;
   height: 35px;
   cursor: pointer;
 }
 
 .sort__item + .sort__item {
-  border-top: 1px solid #666;
+  border-top: 1px solid var(--color-grey);
 }
 
 .sort__item:hover {
-  background-color: #f4f4f4;
+  background-color: var(--color-white-hover);
 }
 
 .edit-form {
@@ -256,7 +271,7 @@
   height: 400px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
-  border: 2px solid white;
+  border: 2px solid var(--color-white);
   border-radius: 10px;
   -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
   transition: -webkit-box-shadow 0.3s ease-in-out;
@@ -271,12 +286,12 @@
 }
 
 .edit-form__title {
-  color: white;
+  color: var(--color-white);
   font-size: 25px;
   line-height: 40px;
   font-weight: 700;
   margin-bottom: 25px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--color-white);
 }
 
 .edit-form__item {
@@ -294,27 +309,35 @@
 
 .edit-form__item label {
   font-size: 18px;
-  color: white;
+  color: var(--color-white);
   display: inline-block;
   width: 100px;
 }
 
-.edit-form__item input {
+.edit-form__item input:not([type='checkbox']) {
+  font-size: 14px;
   height: 25px;
   width: 250px;
-  background-color: white;
+  background-color: var(--color-white);
+  padding-left: 5px;
   border: none;
   border-radius: 5px;
 }
 
 @media (max-width: 760px) {
-  .edit-form__item input {
+  .edit-form__item input:not([type='checkbox']) {
     width: 150px;
   }
 }
 
+.edit-form__item input[type='checkbox'] {
+  height: 25px;
+  width: 25px;
+  margin: 0 auto;
+}
+
 .edit-form__button {
-  color: white;
+  color: var(--color-white);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -336,7 +359,7 @@
 * {
   font-size: 14px;
   font-weight: 500;
-  color: #333;
+  color: var(--color-black);
   font-family: 'Kaisei Opti';
   margin: 0;
   padding: 0;
